@@ -1,0 +1,1 @@
+The New-FunctionFromConstructors.psm1 module will assist you in rapidly generating functions with tab-accessible, named parameters that invoke class constructors (something PowerShell does not support directly). Read the .Description in New-FunctionFromConstructors and follow the pattern in MyTest.psm1 to use it.
