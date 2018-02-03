@@ -42,7 +42,7 @@ PROCESS{
         $newFxName = "New-Object-$($Class.Name)-$($_.GetCustomAttributes('ConstructorName').Name)"
         $runThis = "
         FUNCTION $newFxName {
-        [CmdletBinding()]
+        [CmdletBinding(PositionalBinding=`$true)]
         PARAM($(  $($parameters | ForEach-Object {  '[PARAMETER(Mandatory=$True,ValueFromPipelineByPropertyName=$True)]['+$_.ParameterType+']$'+$_.Name  }) -join ',' ))
         BEGIN{}
         PROCESS{
